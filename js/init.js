@@ -1,2 +1,2 @@
 var tela = new Tela();
-tela.telaPrincipal();
+tela.telaDeLogica();
