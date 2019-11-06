@@ -19,23 +19,26 @@
 
 <div class="row">
   <!--BOTÃO-->
-  <a id="botao" class="waves-effect waves-light btn" onclick="calculo()">Calcular</a>
+  <!--<a id="botao" class="waves-effect waves-light btn" onclick="calculo()">Calcular</a>-->
+  <button data-target="modal1" class="btn modal-trigger" onclick="calculo()">CALCULAR</button>
+
 </div>
 
 </form>
 
 <div class="row">
-  <div class="col s4">
-  </div>
-  <div class="col s4 flow-text">
-    <div class="card teal lighten-2 ">
+
       <div class="card-content white-text">
         <!--RESULTADO-->
-        <span id="resultado" class="resultado">R$ 0.00</span>
-      </div>
-    </div>
+        <div id="modal1" class="modal top-sheet">
+          <div class="teal lighten-2 ">
+            <div class="modal-content">
+              <span id="resultado" class="resultado">R$ 0.00</span>
+            </div>
+          </div>
+        </div>
 
-  </div>
+    </div>
 
 </div>
 

@@ -34,3 +34,9 @@ p#resultado{
 .margem_padrao{
 	margin-top: 20px;
 }
+
+.modal.top-sheet {
+  top: 50% !important;
+  width: 50%;
+	font-size: 50px;
+}
