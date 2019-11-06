@@ -10,9 +10,8 @@ function calculo() {
   document.getElementById("resultado").innerHTML = "R$ "+ lucro;
 }
 
-$(document).keypress(function(event){
-  var keycode = (event.keycode ? event.keycode : event.which);
-  if(keycode == '13'){
-    $('#botao').click();
-  }
+
+
+$(document).ready(function(){
+  $('.modal').modal();
 });
