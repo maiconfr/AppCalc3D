@@ -13,23 +13,20 @@ class Tela {
 
   telaPrincipal(){
     $.get("views/telaPrincipal.htm", function (data) {
+         $('#container').empty();
          $('#container').append(data);
-
     });
-      limpaTela();
   }
 
   telaDeLogica(){
     $.get("views/telaDeLogica.htm", function (data) {
-         $('#container').append(data);
+      $('#container').empty();
+      $('#container').append(data);
 
     });
-      limpaTela();
   }
 
   limpaTela(){
      $('#container').empty();
   }
-
-
 }
