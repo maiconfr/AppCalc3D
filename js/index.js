@@ -1,4 +1,4 @@
-  $( document ).ready(function() {
+$( document ).ready(function() {
 function calculo() {
   var peso = document.getElementById("peso").value;
   var tempo = document.getElementById("tempo").value;
