@@ -1,0 +1,42 @@
+body {
+	font-family: "Crimson Text", "Times New Roman", serif;
+	background-color: #F2FFFC;
+	font-size: 120%;
+	line-height: 1.5;
+flex-wrap: wrap;
+}
+
+h1{
+	font-size: 3rem;
+}
+
+
+p#resultado{
+  width: 200px;
+  margin-left: 10px;
+  text-align:center;
+}
+
+#botao{
+  margin-left: 10px;
+}
+
+#titulo{
+  margin-top: 0;
+    text-align: center;
+    background-color: #00897b;
+        color: #FFF;
+    padding: 2rem;
+}
+
+
+
+.margem_padrao{
+	margin-top: 20px;
+}
+
+.modal.top-sheet {
+  top: 50% !important;
+  width: 50%;
+	font-size: 50px;
+}

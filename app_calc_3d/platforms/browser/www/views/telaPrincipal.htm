@@ -1,0 +1,47 @@
+<div class="center margem_padrao">
+
+<!--PESO-->
+<form class="" action="#">
+
+<div class="row">
+  <div class="input-field col s12">
+    <input id="peso" type="number" class="validate">
+    <label class="" for="peso">Peso da peça (g)</label>
+  </div>
+</div>
+<!--TEMPO-->
+<div class="row">
+  <div class="input-field col s12">
+    <input id="tempo" type="number" class="validate">
+    <label class="" for="tempo">Tempo de Impressão (h)</label>
+  </div>
+</div>
+
+<div class="row">
+  <!--BOTÃO-->
+  <!--<a id="botao" class="waves-effect waves-light btn" onclick="calculo()">Calcular</a>-->
+  <button data-target="modal1" class="btn modal-trigger" onclick="calculo()">CALCULAR</button>
+
+</div>
+
+</form>
+
+<div class="row">
+
+      <div class="card-content white-text">
+        <!--RESULTADO-->
+        <div id="modal1" class="modal top-sheet">
+          <div class="teal lighten-2 ">
+            <div class="modal-content">
+              <span id="resultado" class="resultado">R$ 0.00</span>
+            </div>
+          </div>
+        </div>
+
+    </div>
+
+</div>
+
+
+</div>
+<script type="text/javascript" src="js/index.js"></script>
