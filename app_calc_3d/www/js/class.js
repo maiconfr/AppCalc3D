@@ -1,9 +1,4 @@
-class Tela {
-  constructor() {
-    this.criaNav()
-  }
-
-  criaNav(){
+  function criaNav(){
     $.get("views/nav.htm", function (data) {
          $('body').prepend(data); //comando .prepend() adiciona no inicio do elemento
          var elems = document.querySelectorAll('.sidenav');
@@ -11,14 +6,16 @@ class Tela {
     });
   }
 
-  telaPrincipal(){
+  function telaPrincipal(){
+    limpaTela();
     $.get("views/telaPrincipal.htm", function (data) {
          $('#container').empty();
          $('#container').append(data);
     });
   }
 
-  telaDeLogica(){
+  function telaDeLogica(){
+    limpaTela();
     $.get("views/telaDeLogica.htm", function (data) {
       $('#container').empty();
       $('#container').append(data);
@@ -26,7 +23,6 @@ class Tela {
     });
   }
 
-  limpaTela(){
+  function limpaTela(){
      $('#container').empty();
   }
-}
