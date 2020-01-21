@@ -9,6 +9,9 @@
   "installed_plugins": {
     "cordova-plugin-whitelist": {
       "PACKAGE_NAME": "br.com.maicon.calc3d"
+    },
+    "cordova-sqlite-storage": {
+      "PACKAGE_NAME": "br.com.maicon.calc3d"
     }
   },
   "dependent_plugins": {}
