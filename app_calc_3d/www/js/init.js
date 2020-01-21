@@ -1,17 +1,17 @@
-let tela = new Tela();
-tela.telaPrincipal();
+criaNav();
+telaPrincipal();
 
   $( document ).ready(function() {
 
     //ações dos botões do nav
     $("#botaoHome").click(function(event) {
       event.preventDefault();
-      tela.telaPrincipal();
+      telaPrincipal();
       $('.sidenav').sidenav('close');
     });
     $("#botaoLogicaDeCalculo").click(function(event) {
       event.preventDefault();
-      tela.telaDeLogica();
+      telaDeLogica();
       $('.sidenav').sidenav('close');
     });
   });
