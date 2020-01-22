@@ -1,19 +1,15 @@
 $( document ).ready(function() {
-function calculo() {
-  var peso = document.getElementById("peso").value;
-  var tempo = document.getElementById("tempo").value;
+$("#calc").click(function() {
+  var peso = $("#peso").val();
+  var tempo = $("#tempo").val();
 
   var calculo = peso*(0.16) + (tempo*0.8*0.4);
 
   var lucro = calculo*1 + calculo;
-  lucro = lucro.toFixed(2)
+  lucro = lucro.toFixed(2);
 
-  document.getElementById("resultado").innerHTML = "R$ "+ lucro;
-}
+  $("#resultado").text("R$ "+ lucro);
+})
 
-
-
-$(document).ready(function(){
-  $('.modal').modal();
-});
+  M.AutoInit();
 });
