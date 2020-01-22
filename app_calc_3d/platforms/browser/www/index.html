@@ -17,21 +17,26 @@
 <body>
 <!-- todo o conteudo seja posto dinamicamente aqui -->
 <div id="container" class="container">
-<<<<<<< HEAD
-=======
 
->>>>>>> f1bb476544f9484161fc119d70e9b5a8dc462231
 </div>
 
 
 
   <!--JavaScript at end of body for optimized loading-->
+    <script src="cordova.js"></script>
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
     <script type="text/javascript" src="js/class.js"></script>
   <script type="text/javascript" src="js/init.js"></script>
 <script type="text/javascript">
-    $("#container").append("htmlString/elem/fn/etc")
+document.addEventListener('deviceready', function() {
+var db = sqlitePlugin.openDatabase('mydb.db', '1.0', '', 1);
+db.transaction(function (txn) {
+  txn.executeSql('SELECT 42 AS `answer`', [], function (tx, res) {
+    $("#container").append(res.rows.item(0)); // {"answer": 42}
+  });
+});
+})
 </script>
 
 </body>
