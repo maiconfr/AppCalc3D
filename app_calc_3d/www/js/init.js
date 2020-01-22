@@ -17,9 +17,11 @@ telaPrincipal();
   });
 
 
-  //inicia o DB
+
   document.addEventListener('deviceready', function() {
   var db = sqlitePlugin.openDatabase('mydb.db', '1.0', '', 1);
+
+
   db.transaction(function(tx) {
       tx.executeSql("CREATE TABLE IF NOT EXISTS valores ("+
                       "id int(90) NOT NULL,"+
@@ -33,6 +35,8 @@ telaPrincipal();
                       "padrao int(1) DEFAULT 0,"+
                       "PRIMARY KEY(id))");
 
+
+
       tx.executeSql("INSERT INTO valores(id,precoFilamento,pesoPeca,consumoImpressora,taxaEnergia,lucroImpressao,erroTempo,erroPeso,padrao)"+
                     "SELECT 1,'2','3','4','5','6','7','8',1 "+
                     "WHERE NOT EXISTS(SELECT 1 FROM valores WHERE id = 1);");
@@ -42,3 +46,4 @@ telaPrincipal();
     }, function() {
       console.log('Populated database OK');
     });
+})
