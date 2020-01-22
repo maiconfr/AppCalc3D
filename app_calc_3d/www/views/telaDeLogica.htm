@@ -1,6 +1,6 @@
 <!--Preço do Filamento-->
 <div class="row">
-  <div class="input-field col s12">
+  <div class="input-field col s11">
     <input id="tempo" type="number" class="">
     <label class="" for="tempo">Preço do Filamento (R$/kg)</label>
   </div>
@@ -8,7 +8,7 @@
 
 <!--Peso-->
 <div class="row">
-  <div class="input-field col s12">
+  <div class="input-field col s11">
     <input id="tempo" type="number" class="">
     <label class="" for="tempo">Peso da peça (g)</label>
   </div>
@@ -16,41 +16,117 @@
 
 <!--Consumo-->
 <div class="row">
-  <div class="input-field col s12">
+  <div class="input-field col s11">
     <input id="tempo" type="number" class="">
-    <label class="" for="tempo">Consumo da sua impressora (kWh)</label>
+    <label class="" for="tempo">Consumo da sua impressora (kW)</label>
+  </div>
+
+  <!-- INFO -->
+  <div class="col s1">
+    <!-- Modal Trigger -->
+    <a class=" btn-medium modal-trigger " href="#info-consumo"><i class="material-icons botao_info">info_outline</i></a>
+
+    <!-- Modal Structure -->
+    <div id="info-consumo" class="modal">
+      <div class="modal-content">
+        <h4>Consumo da sua impressora</h4>
+        <p>O consume das impressoras 3D pode variar, mas as mais comuns, como uma ender 3, tem um consumo de 360W. Caso você não saiba o consumo da sua impressora, deixe o valor de default.</p>
+        <center><img src="img/impressoras.jpg" alt="Erro em peça 3D" align="middle" width="300px"></center>
+      </div>
+    </div>
   </div>
 </div>
 
+
+
 <!--Taxa de Energia-->
 <div class="row">
-  <div class="input-field col s12">
+  <div class="input-field col s11">
     <input id="tempo" type="number" class="">
     <label class="" for="tempo">Taxa de Energia (R$/kWh)</label>
   </div>
+
+  <!-- INFO -->
+  <div class="col s1">
+    <!-- Modal Trigger -->
+    <a class=" btn-medium modal-trigger " href="#info-energia"><i class="material-icons botao_info">info_outline</i></a>
+
+    <!-- Modal Structure -->
+    <div id="info-energia" class="modal">
+      <div class="modal-content">
+        <h4>Taxa de Energia Elétrica</h4>
+        <p>Verifique na sua conta de luz o valor da taxa cobrada por kWh. Procure fazer uma média das taxas anteriores, ou apenas use a maior taxa.</p>
+      </div>
+    </div>
+  </div>
+
 </div>
 
 <!--Lucro-->
 <div class="row">
-  <div class="input-field col s12">
+  <div class="input-field col s11">
     <input id="tempo" type="number" class="">
     <label class="" for="tempo">Lucro da Impressão (%)</label>
+  </div>
+
+  <!-- INFO -->
+  <div class="col s1">
+    <!-- Modal Trigger -->
+    <a class=" btn-medium modal-trigger " href="#info-lucro"><i class="material-icons botao_info">info_outline</i></a>
+
+    <!-- Modal Structure -->
+    <div id="info-lucro" class="modal">
+      <div class="modal-content">
+        <h4>Lucro</h4>
+        <p>Coloque em porcentagem a quantidade de lucro que você deseja obter sobre o valor bruto da peça impressa.</p>
+      </div>
+    </div>
   </div>
 </div>
 
 <!--Margem de Erro Tempo-->
 <div class="row">
-  <div class="input-field col s12">
+  <div class="input-field col s11">
     <input id="tempo" type="number" class="">
     <label class="" for="tempo">Margem de Erro Tempo (%)</label>
+  </div>
+
+  <!-- INFO -->
+  <div class="col s1">
+    <!-- Modal Trigger -->
+    <a class=" btn-medium modal-trigger " href="#info-tempo"><i class="material-icons botao_info">info_outline</i></a>
+
+    <!-- Modal Structure -->
+    <div id="info-tempo" class="modal">
+      <div class="modal-content">
+        <h4>Margem de Erro no Tempo</h4>
+        <p>Os softwares de fatiamento geram um tempo de imipressão que nem sempre é preciso. Busque conhecer um erro médio que o fatiador que você utiliza diz que a impressora irá levar para imprimir, e o tempo real que a peça é impressa. Pense também na possibilidade de acontecerem falhas no processo de impressão, tendo que recomeçar os trabalhos e levar mais tempo.</p>
+        <center><img src="img/tempo.jpg" alt="Erro em peça 3D" align="middle" width="300px"></center>
+      </div>
+    </div>
   </div>
 </div>
 
 <!--Margem de Erro Peso-->
 <div class="row">
-  <div class="input-field col s12">
+  <div class="input-field col s11">
     <input id="tempo" type="number" class="">
     <label class="" for="tempo">Margem de Erro Peso (%)</label>
+  </div>
+
+  <!-- INFO -->
+  <div class="col s1">
+    <!-- Modal Trigger -->
+    <a class=" btn-medium modal-trigger " href="#info-peso"><i class="material-icons botao_info">info_outline</i></a>
+
+    <!-- Modal Structure -->
+    <div id="info-peso" class="modal">
+      <div class="modal-content">
+        <h4>Margem de Erro no Peso</h4>
+        <p>Coloque uma porcentagem em cima do valor da sua peça caso a impressão venha a falhar, assim você cria uma margem de segurança no valor da sua impressão.</p>
+        <center><img src="img/erro_impressao.png" alt="Erro em peça 3D" align="middle" width="300px"></center>
+      </div>
+    </div>
   </div>
 </div>
 
@@ -60,3 +136,5 @@
   <button class="btn" onclick="()">Salvar Variáveis</button>
 
 </div>
+
+<script type="text/javascript" src="js/index.js"></script>
