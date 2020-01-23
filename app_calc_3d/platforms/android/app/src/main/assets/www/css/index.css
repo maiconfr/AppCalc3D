@@ -45,3 +45,6 @@ p#resultado{
 	margin-top: 25px;
 	margin-left: -10px;
 }
+.some{
+	display: none !important;
+}

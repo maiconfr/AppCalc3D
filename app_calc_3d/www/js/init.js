@@ -1,4 +1,3 @@
-criaNav();
 telaPrincipal();
 
   $( document ).ready(function() {

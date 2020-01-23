@@ -1,26 +1,14 @@
-  function criaNav(){
-    $.get("views/nav.htm", function (data) {
-         $('body').prepend(data); //comando .prepend() adiciona no inicio do elemento
-         var elems = document.querySelectorAll('.sidenav');
-         var instances = M.Sidenav.init(elems);
-    });
-  }
+
 
   function telaPrincipal(){
-    limpaTela();
-    $.get("views/telaPrincipal.htm", function (data) {
-         $('#container').empty();
-         $('#container').append(data);
-    });
+
+         $('#containerLogica').addClass("some");
+         $('#containerPrincipal').removeClass("some");
   }
 
   function telaDeLogica(){
-    limpaTela();
-    $.get("views/telaDeLogica.htm", function (data) {
-      $('#container').empty();
-      $('#container').append(data);
-
-    });
+    $('#containerPrincipal').addClass("some");
+    $('#containerLogica').removeClass("some");
   }
 
   function limpaTela(){
