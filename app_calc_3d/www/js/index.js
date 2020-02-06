@@ -3,12 +3,12 @@ $("#calc").click(function() {
   var peso = $("#peso").val();
   var tempo = $("#tempo").val();
 
-  var calculo = peso*(0.16) + (tempo*0.8*0.4);
+  var calculo = (peso+erroPeso)*(preco/1000) + ((tempo+erroTempo)*taxaEnergia*consumo);
 
-  var lucro = calculo*1 + calculo;
-  lucro = lucro.toFixed(2);
+  var precoFinal = calculo*(lucro/100)) + calculo;
+  precoFinal = precoFinal.toFixed(2);
 
-  $("#resultado").text("R$ "+ lucro);
+  $("#resultado").text("R$ "+ precoFinal);
 })
 
   M.AutoInit();

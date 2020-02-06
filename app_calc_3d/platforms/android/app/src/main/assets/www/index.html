@@ -120,23 +120,15 @@
   <!--Preço do Filamento-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="tempo" type="number" class="">
-      <label class="" for="tempo">Preço do Filamento (R$/kg)</label>
-    </div>
-  </div>
-
-  <!--Peso-->
-  <div class="row">
-    <div class="input-field col s11">
-      <input id="tempo" type="number" class="">
-      <label class="" for="tempo">Peso da peça (g)</label>
+      <input id="preco-filamento" type="number" >
+      <label for="preco-filamento" >Preço do Filamento (R$/kg)</label>
     </div>
   </div>
 
   <!--Consumo-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="tempo" type="number" class="">
+      <input id="consumo-impressora" type="number" class="">
       <label class="" for="tempo">Consumo da sua impressora (kW)</label>
     </div>
 
@@ -161,7 +153,7 @@
   <!--Taxa de Energia-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="tempo" type="number" class="">
+      <input id="taxa-energia" type="number" class="">
       <label class="" for="tempo">Taxa de Energia (R$/kWh)</label>
     </div>
 
@@ -184,7 +176,7 @@
   <!--Lucro-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="tempo" type="number" class="">
+      <input id="lucro" type="number" class="">
       <label class="" for="tempo">Lucro da Impressão (%)</label>
     </div>
 
@@ -206,7 +198,7 @@
   <!--Margem de Erro Tempo-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="tempo" type="number" class="">
+      <input id="erro-tempo" type="number" class="">
       <label class="" for="tempo">Margem de Erro Tempo (%)</label>
     </div>
 
@@ -229,7 +221,7 @@
   <!--Margem de Erro Peso-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="tempo" type="number" class="">
+      <input id="erro-peso" type="number" class="">
       <label class="" for="tempo">Margem de Erro Peso (%)</label>
     </div>
 
@@ -252,7 +244,7 @@
   <div class="row">
     <!--BOTÃO-->
     <!--<a id="botao" class="waves-effect waves-light btn" onclick="calculo()">Calcular</a>-->
-    <button class="btn" onclick="()">Salvar Variáveis</button>
+    <button id="btnSalvarVariaveis" class="btn" >Salvar Variáveis</button>
 
   </div>
 
