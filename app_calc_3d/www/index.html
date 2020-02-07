@@ -17,17 +17,17 @@
 <body>
 <!--este é o menu -->
 <nav class="#00796b teal darken-2 z-depth-3">
-  <div class="nav-wraper">
-    <div class="row center-align truncate">
-      <a href="#" class="sidenav-trigger show-on-large" data-target="menu-side"><i class="material-icons">menu</i></a>
-      <a href="#!" class="center"><h5><b>Cálculo do Preço de Impressão</b></h5></a>
+  <div class="nav-wraper" tabindex="-1">
+    <div class="row center-align truncate" tabindex="-1">
+      <a tabindex="-1" href="#" class="sidenav-trigger show-on-large" data-target="menu-side"><i class="material-icons">menu</i></a>
+      <a tabindex="-1" href="#!" class="center"><h5><b>Cálculo do Preço de Impressão</b></h5></a>
 
     </div>
 
   </div>
 </nav>
 
-<ul class="sidenav" id="menu-side">
+<ul class="sidenav" id="menu-side" tabindex="-1">
         <li>
           <div class="user-view">
             <div class="background">
@@ -58,9 +58,9 @@
           </div>
         </li>
         <li>
-          <a href="#">
+          <a id="restaurarPadrao" href="#">
             <i class="material-icons">cloud</i>
-            Segundo elemento
+            Restaurar Padrão de Cáulculo
           </a>
         </li>
 </ul>
@@ -117,10 +117,11 @@
 </div>
 <!--esta é a tela de logica -->
 <div id="containerLogica" class="container some">
+  <form id="formLogica">
   <!--Preço do Filamento-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="preco-filamento" type="number" >
+      <input id="preco-filamento" type="number" tabindex=1>
       <label for="preco-filamento" >Preço do Filamento (R$/kg)</label>
     </div>
   </div>
@@ -128,7 +129,7 @@
   <!--Consumo-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="consumo-impressora" type="number" class="">
+      <input id="consumo-impressora" type="number" class="" step="0.01" tabindex=2>
       <label class="" for="tempo">Consumo da sua impressora (kW)</label>
     </div>
 
@@ -153,7 +154,7 @@
   <!--Taxa de Energia-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="taxa-energia" type="number" class="">
+      <input id="taxa-energia" type="number" class="" tabindex=3 step="0.01">
       <label class="" for="tempo">Taxa de Energia (R$/kWh)</label>
     </div>
 
@@ -176,7 +177,7 @@
   <!--Lucro-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="lucro" type="number" class="">
+      <input id="lucro" type="number" class="" tabindex=4>
       <label class="" for="tempo">Lucro da Impressão (%)</label>
     </div>
 
@@ -198,7 +199,7 @@
   <!--Margem de Erro Tempo-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="erro-tempo" type="number" class="">
+      <input id="erro-tempo" type="number" class="" tabindex=5>
       <label class="" for="tempo">Margem de Erro Tempo (%)</label>
     </div>
 
@@ -221,18 +222,18 @@
   <!--Margem de Erro Peso-->
   <div class="row">
     <div class="input-field col s11">
-      <input id="erro-peso" type="number" class="">
+      <input id="erro-peso" type="number" class="" tabindex=6>
       <label class="" for="tempo">Margem de Erro Peso (%)</label>
     </div>
 
     <!-- INFO -->
-    <div class="col s1">
+    <div class="col s1" tabindex="-1">
       <!-- Modal Trigger -->
-      <a class=" btn-medium modal-trigger " href="#info-peso"><i class="material-icons botao_info">info_outline</i></a>
+      <a  tabindex="-1" class=" btn-medium modal-trigger " href="#info-peso"><i class="material-icons botao_info">info_outline</i></a>
 
       <!-- Modal Structure -->
-      <div id="info-peso" class="modal">
-        <div class="modal-content">
+      <div id="info-peso" class="modal" tabindex="-1">
+        <div class="modal-content" tabindex="-1">
           <h4>Margem de Erro no Peso</h4>
           <p>Coloque uma porcentagem em cima do valor da sua peça caso a impressão venha a falhar, assim você cria uma margem de segurança no valor da sua impressão.</p>
           <center><img src="img/erro_impressao.png" alt="Erro em peça 3D" align="middle" width="300px"></center>
@@ -244,12 +245,12 @@
   <div class="row">
     <!--BOTÃO-->
     <!--<a id="botao" class="waves-effect waves-light btn" onclick="calculo()">Calcular</a>-->
-    <button id="btnSalvarVariaveis" class="btn" >Salvar Variáveis</button>
+    <button type="submit" id="btnSalvarVariaveis" class="btn" >Salvar Variáveis</button>
 
   </div>
 
 
-
+</form>
 </div>
 
   <!--JavaScript at end of body for optimized loading-->

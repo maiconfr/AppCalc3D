@@ -17,7 +17,8 @@ $(document).ready(function() {
 
 
 
-$("#btnSalvarVariaveis").click(function() {
+$("#btnSalvarVariaveis").click(function(event) {
+  event.preventDefault();
   console.log("CLICOU NO BUTÃUM");
   var precoFilamento = $("#preco-filamento").val();
   var consumoImpressora = $("#consumo-impressora").val();
@@ -44,14 +45,36 @@ $("#btnSalvarVariaveis").click(function() {
     },
     function(error) {
         console.log('Transaction ERROR: ' + error.message);
+        M.toast({html: '<h5><p>Ocorreu um erro ao salvar :(</p></h5>', classes: 'rounded red center white-text flow-text'})
       },
       function() {
         console.log('jÓINHA');
+        M.toast({html: '<h5><p>Informações salvas com sucesso</p></h5>', classes: 'rounded green center white-text flow-text'})
       });
 
   })
 
+  function carregaPadrao(){
+    var db = sqlitePlugin.openDatabase('mydb.db', '1.0', '', 1);
 
+    db.transaction(function(tx) {
+      tx.executeSql("DELETE FROM valores WHERE id=2;", [],
+        function(tx, rs) {
+        })
+      },
+      function(error) {
+          console.log('Transaction ERROR: ' + error.message);
+          M.toast({html: '<h5><p>As Configurações padroes ja estao carregadas</p></h5>', classes: 'rounded red center white-text flow-text'})
+        },
+        function() {
+          console.log('jÓINHA');
+          M.toast({html: '<h5><p>Padrão Restaurado</p></h5>', classes: 'rounded green center white-text flow-text'})
+        });
+        carregaValoresIniciais();
+        $('.sidenav').sidenav('close');
+  }
+
+function carregaValoresIniciais(){
 document.addEventListener('deviceready', function() {
   var db = sqlitePlugin.openDatabase('mydb.db', '1.0', '', 1);
 
@@ -71,7 +94,7 @@ document.addEventListener('deviceready', function() {
 
 
     tx.executeSql("INSERT INTO valores(id,precoFilamento,consumoImpressora,taxaEnergia,lucroImpressao,erroTempo,erroPeso,padrao)" +
-      "SELECT 1,'2','3','4','5','6','7',1 " +
+      "SELECT 1,'100','0.4','0.8','100','50','50',1 " +
       "WHERE NOT EXISTS(SELECT 1 FROM valores WHERE id = 1);");
 
   }, function(error) {
@@ -137,4 +160,11 @@ document.addEventListener('deviceready', function() {
         }
       });
   })
+})
+}
+
+carregaValoresIniciais();
+
+$("#restaurarPadrao").click(function() {
+  carregaPadrao();
 })
